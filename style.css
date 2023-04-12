@@ -1,0 +1,126 @@
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --darkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --lightGray: hsl(0, 0%, 98%);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color:var(--darkBlue);
+
+}
+.container{
+    display:grid;
+    grid-template: repeat(6, 2fr 1fr 1fr 1fr 1fr 1fr)/repeat(3,1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.grid-item{
+    box-shadow: 1px 5px 15px rgb(218, 216, 216);
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    width:370px;
+    height:250px;
+
+}
+.image{
+    align-self: flex-end;
+    margin-right: 20px;
+}
+p{
+    color:var(--grayishBlue);
+    margin-top:10px;
+    font-weight: 200;
+}
+h2{
+    font-size:1.5rem;
+    margin-bottom: 0;
+}
+.section-text{
+    padding:10px 30px;
+}
+.header{
+    box-shadow: none;
+    grid-column: span 3;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+h1{
+    font-weight: 200;
+    font-size:2.1rem;
+    text-align: center;
+    margin-bottom:0px;
+}
+.bold{
+    font-weight: 600;
+    font-size: 2rem;
+}
+.header p{
+    width:500px;
+    text-align:center;
+}
+.supervisory{
+    grid-area: 3 / 1 / span 2;
+    border-top: 5px solid var(--cyan);
+}
+.team{
+    grid-area: 2 / 2 / span 2;
+    border-top:5px solid var(--red);
+}
+.karma{
+    grid-area: 4 / 2 / span 2;
+    border-top:5px solid var(--orange);
+
+}
+.calculator{
+    grid-area: 3 / 3 / span 2;
+    border-top:5px solid var(--blue);
+}
+
+@media screen and (max-width: 375px){
+    .container{
+        grid-template-rows:0.8fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .grid-item{
+        width:320px;
+    }
+    .header{
+        grid-area:1;
+        align-self: flex-end;
+        
+    }
+    .header p{
+        width:290px;
+    }
+    h1{
+        font-size:1.5rem;
+    }
+    .bold {
+        font-size:1.5rem;
+    }
+    .supervisory{
+        grid-area: 2;
+    }
+    .team{
+        grid-area:3;
+    }
+    .karma{
+        grid-area:4;
+    }
+    .calculator{
+        grid-area:5
+    }
+}
