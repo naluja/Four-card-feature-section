@@ -13,6 +13,9 @@
     color:var(--darkBlue);
 
 }
+body{
+    background-color: var(--lightGray);
+}
 .container{
     display:grid;
     grid-template: repeat(6, 2fr 1fr 1fr 1fr 1fr 1fr)/repeat(3,1fr);
@@ -52,21 +55,24 @@ h2{
     display:flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
     
 }
 h1{
     font-weight: 200;
-    font-size:2.1rem;
+    font-size:2.5rem;
     text-align: center;
     margin-bottom:0px;
 }
 .bold{
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .header p{
     width:500px;
     text-align:center;
+    color:var(--darkBlue);
+    font-size: 1.1rem;
 }
 .supervisory{
     grid-area: 3 / 1 / span 2;
